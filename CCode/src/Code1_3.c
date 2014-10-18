@@ -17,9 +17,10 @@ int isPermutation(char* str1, char* str2)
 	if (strlen(str1) != strlen(str2)) return 0;
 
 	// Assume ASCII strings
-	int count[256];
+	// If bigger character space, increase size of array or use a different data structure
+	int count[256] = { 0 };  	// memset(count, 0, 256 * sizeof(int)); will also work
 	int i;
-	memset(count, 0, 256 * sizeof(int));
+
 	for (i = 0; i < strlen(str1); i++){
 		count[(int)str1[i]]++;
 		count[(int)str2[i]]--;
@@ -30,7 +31,6 @@ int isPermutation(char* str1, char* str2)
 	}
 	return 1;
 }
-
 
 void Code1_3()
 {
