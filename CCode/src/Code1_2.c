@@ -25,12 +25,10 @@ void reverse(char* str)
 }
 
 
-int main(){
+void Code1_2(){
 	char str[14] = "Hello, World!";
 
 	printf("Original: %s\r", str);
 	reverse(str);
 	printf("Reversed: %s\r", str);
-
-	return 1;
 }
